@@ -8,51 +8,65 @@ on fs
 on early-fs
     start vold
 
+service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
+    class main
+    user root
+    group root system
+    oneshot
+    disabled
+    seclabel u:r:recovery:s0
+
+service keymaster-4-1 /vendor/bin/hw/android.hardware.keymaster@4.1-service.trustonic
+    class early_hal
+    interface android.hardware.keymaster@4.0::IKeymasterDevice default
+    interface android.hardware.keymaster@4.1::IKeymasterDevice default
+    user root
+    group root drmrpc
+    disabled
+    seclabel u:r:recovery:s0
+
+service gatekeeper-1-0  /vendor/bin/hw/android.hardware.gatekeeper@1.0-service.trusty
+    interface android.hardware.gatekeeper@1.0::IGatekeeper default
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
 on property:crypto.ready=1
-    start mobicore
-    start soter_hal
-    start keymaster_attestation-1-1
-    start vendor.gatekeeper-1-0
-    start vendor.keymaster-4-1-trustonic
+    start keymaster-4-1
 
 on property:hwservicemanager.ready=true
     start mobicore
-    start soter_hal
-    start keymaster_attestation-1-1
-    start vendor.gatekeeper-1-0
-    start vendor.keymaster-4-1-trustonic
+    start gatekeeper-1-0
+    start keymaster-4-1
 
 on property:ro.crypto.state=unsupported
     stop mobicore
-    stop soter_hal
-    stop keymaster_attestation-1-1
-    stop vendor.gatekeeper-1-0
-    stop vendor.keymaster-4-1-trustonic
+    stop gatekeeper-1-0
+    stop keymaster-4-1
 
 on property:ro.crypto.state=unencrypted
     stop mobicore
-    stop soter_hal
-    stop keymaster_attestation-1-1
-    stop vendor.gatekeeper-1-0
-    stop vendor.keymaster-4-1-trustonic
+    stop gatekeeper-1-0
+    stop keymaster-4-1
 
 on property:twrp.decrypt.done=true
     stop mobicore
-    stop keymaster_attestation-1-1
-    stop vendor.gatekeeper-1-0
-    stop vendor.keymaster-4-1-trustonic
+    stop gatekeeper-1-0
+    stop keymaster-4-1
 
 on property:crypto.ready=0
     stop mobicore
-    stop soter_hal
-    stop keymaster_attestation-1-1
-    stop vendor.gatekeeper-1-0
-    stop vendor.keymaster-4-1-trustonic
+    stop gatekeeper-1-0
+    stop keymaster-4-1
 
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.controller "musb-hdrc"
     setprop sys.usb.ffs.aio_compat 0
+
+on boot
+    start mtk.plpath.utils.link
 
 on fs && property:ro.debuggable=0
     # distinguish USB shoulde connect or not, i.e. CDP vs SDP
