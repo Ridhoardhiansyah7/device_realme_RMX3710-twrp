@@ -64,3 +64,5 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+# Hidl
+PRODUCT_ENFORCE_VINTF_MANIFEST := true 
