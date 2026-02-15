@@ -82,6 +82,8 @@ service gatekeeper-1-0  /vendor/bin/hw/android.hardware.gatekeeper@1.0-service.t
     seclabel u:r:recovery:s0
 
 on property:crypto.ready=1
+    start mobicore
+    start gatekeeper-1-0
     start keymaster-4-1
 
 on property:hwservicemanager.ready=true
