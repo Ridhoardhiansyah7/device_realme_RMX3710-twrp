@@ -101,5 +101,5 @@ on property:twrp.decrypt.done=true
 
 on boot
     start mtk.plpath.utils.link
-    start boot-hal-1-0
+    start boot-hal-1-2
     start health-hal-2-1
