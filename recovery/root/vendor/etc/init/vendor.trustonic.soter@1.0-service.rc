@@ -1,8 +1,0 @@
-service soter_hal /vendor/bin/hw/vendor.trustonic.soter@1.0-service
-    group system
-    interface aidl vendor.trustonic.hardware.soter.ITrustonicSoter/default
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
