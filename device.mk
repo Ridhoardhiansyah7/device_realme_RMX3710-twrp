@@ -45,8 +45,8 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Bootctrl
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl-1.2-mtkimpl \
-    android.hardware.boot@1.0-impl-1.2-mtkimpl.recovery
+    android.hardware.boot@1.2-mtkimpl \
+    android.hardware.boot@1.2-mtkimpl.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
