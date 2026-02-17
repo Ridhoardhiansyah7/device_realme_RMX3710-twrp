@@ -17,7 +17,7 @@ Rear Camera  | 64 MP
 Front Camera | 8 MP
 
 **Specifications in detail:**  
-See [GSMArena - Realme C55 (2021)](https://m.gsmarena.com/realme_c55-12159.php)
+See [GSMArena - Realme C55](https://m.gsmarena.com/realme_c55-12159.php)
 
 ---
 
