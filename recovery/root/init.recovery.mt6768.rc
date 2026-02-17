@@ -1,6 +1,6 @@
 #add for board init.rc for recovery mode
 import /init.recovery.common.rc
-import /init.tee.rc
+import /init.recovery.tee.rc
 
 on init
      start prepdecrypt
