@@ -177,7 +177,7 @@ TW_EXCLUDE_ENCRYPTED_BACKUPS := false
 
 # Brightness
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_DEFAULT_BRIGHTNESS := 1400
+TW_DEFAULT_BRIGHTNESS := 1000
 TW_MAX_BRIGHTNESS := 2048
 
 # StatusBar
@@ -188,6 +188,30 @@ TW_CUSTOM_BATTERY_POS := "790"
 
 # Storage
 RECOVERY_SDCARD_ON_DATA := true
+
+
+# PBRP Configuration
+PBRP_DEVICE := RMX323X
+PBRP_DEFAULT_LANG := in
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_VIBRATOR_PATH := "/sys/class/leds/vibrator/duration"
+PB_TORCH_PATH := "/sys/class/flashlight_core/flashlight"
+PB_TORCH_MAX_BRIGHTNESS := 1
+
+
+# OrangeFox Configuration
+FOX_VIRTUAL_AB_DEVICE := true
+FOX_BUILD_DEVICE := RMX3710
+OF_DEFAULT_LANG := id
+OF_FLASHLIGHT_ENABLE := true
+OF_FL_PATH1 := /sys/class/flashlight_core/flashlight
+OF_VIBRATOR_ENABLE := true
+OF_VIBRATOR_PATH := /sys/class/leds/vibrator/duration
+OF_HIDE_NOTCH := true
+OF_KEEP_DM_VERITY := true
+OF_CLOCK_POS := 1
+OF_STATUS_INDENT_LEFT := 50
+OF_STATUS_INDENT_RIGHT := 50
 
 # Maintainer
 BOARD_MAINTAINER_NAME := RMX3710-Aflahal
