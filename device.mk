@@ -79,4 +79,4 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
 # Hidl
-PRODUCT_ENFORCE_VINTF_MANIFEST := false
+#PRODUCT_ENFORCE_VINTF_MANIFEST := false
