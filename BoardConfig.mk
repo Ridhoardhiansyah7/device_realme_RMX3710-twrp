@@ -194,7 +194,6 @@ RECOVERY_SDCARD_ON_DATA := true
 PBRP_DEVICE := RMX323X
 PBRP_DEFAULT_LANG := in
 PB_DISABLE_DEFAULT_DM_VERITY := true
-PB_VIBRATOR_PATH := "/sys/class/leds/vibrator/duration"
 PB_TORCH_PATH := "/sys/class/flashlight_core/flashlight"
 PB_TORCH_MAX_BRIGHTNESS := 1
 
@@ -205,8 +204,6 @@ FOX_BUILD_DEVICE := RMX3710
 OF_DEFAULT_LANG := id
 OF_FLASHLIGHT_ENABLE := true
 OF_FL_PATH1 := /sys/class/flashlight_core/flashlight
-OF_VIBRATOR_ENABLE := true
-OF_VIBRATOR_PATH := /sys/class/leds/vibrator/duration
 OF_HIDE_NOTCH := true
 OF_KEEP_DM_VERITY := true
 OF_CLOCK_POS := 1
