@@ -15,9 +15,13 @@
 #
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/twrp_RMX3710.mk
+    $(LOCAL_DIR)/twrp_RMX3710.mk \
+    $(LOCAL_DIR)/pbrp_RMX3710.mk
     
 COMMON_LUNCH_CHOICES += \
     twrp_RMX3710-user \
     twrp_RMX3710-userdebug \
-    twrp_RMX3710-eng
+    twrp_RMX3710-eng \
+    pbrp_RMX3710-user \
+    pbrp_RMX3710-userdebug \
+    pbrp_RMX3710-eng
