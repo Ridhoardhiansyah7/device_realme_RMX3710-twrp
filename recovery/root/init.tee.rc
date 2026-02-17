@@ -1,4 +1,5 @@
- Start Daemon (Registry directories should already be present)
+# From init.trustonic.rc
+# Start Daemon (Registry directories should already be present)
 service mobicore /vendor/bin/mcDriverDaemon --sfs-reformat --P1 /mnt/vendor/persist/mcRegistry \
 	-r /vendor/app/mcRegistry/06090000000000000000000000000000.drbin \
 	-r /vendor/app/mcRegistry/020f0000000000000000000000000000.drbin \
@@ -33,8 +34,8 @@ service mobicore /vendor/bin/mcDriverDaemon --sfs-reformat --P1 /mnt/vendor/pers
 	-r /odm/vendor/app/mcRegistry/6b3f5fa0f8cf55a7be2582587d62d63a.drbin \
         -r /odm/vendor/app/mcRegistry/09070000000000000000000000000000.drbin \
 	-r /vendor/app/mcRegistry/5020170115e016302017012521300000.drbin
-    user system
-    group system
+    user root
+    group root
     class core
     priority -20
     disabled
@@ -63,7 +64,7 @@ service mobicore /vendor/bin/mcDriverDaemon --sfs-reformat --P1 /mnt/vendor/pers
 # 9073f03a9618383bb1856eb3f990babd.drbin : m4u
 # 6b3f5fa0f8cf55a7be2582587d62d63a.drbin : hdcp
 
-
+# from init.tee.rc
 on init
     #create mountpoint for /mnt/vendor/persist partition
     mkdir /mnt/vendor/persist 0771 system system
