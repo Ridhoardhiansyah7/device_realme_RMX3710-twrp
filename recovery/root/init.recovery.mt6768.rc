@@ -99,7 +99,9 @@ on property:twrp.decrypt.done=true
     stop gatekeeper-1-0
     stop keymaster-4-1
 
+on post-fs
+    start boot-hal-1-2
+
 on boot
     start mtk.plpath.utils.link
-    start boot-hal-1-2
     start health-hal-2-1
