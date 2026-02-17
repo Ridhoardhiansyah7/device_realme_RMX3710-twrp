@@ -35,18 +35,10 @@ service keymaster-4-1 /vendor/bin/hw/android.hardware.keymaster@4.1-service.trus
     seclabel u:r:recovery:s0
 
 service keymaster_attestation-1-1 /vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
-    interface vendor.mediatek.hardware.keymaster_attestation@1.0::IKeymasterDevice default
-    interface vendor.mediatek.hardware.keymaster_attestation@1.1::IKeymasterDevice default
     class hal
     user root
     group root
     disabled
-
-service soter_hal /vendor/bin/hw/vendor.trustonic.soter@1.0-service
-    class late_start
-    user root
-    group root
-    interface aidl vendor.trustonic.hardware.soter.ITrustonicSoter/default
 
 service gatekeeper-1-0  /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
     interface android.hardware.gatekeeper@1.0::IGatekeeper default
@@ -57,42 +49,36 @@ service gatekeeper-1-0  /vendor/bin/hw/android.hardware.gatekeeper@1.0-service
 
 on property:crypto.ready=1
     start mobicore
-    start soter_hal
     start keymaster_attestation-1-1
     start gatekeeper-1-0
     start keymaster-4-1
 
 on property:vendor.sys.listener.registered=true
     start mobicore
-    start soter_hal
     start keymaster_attestation-1-1
     start gatekeeper-1-0
     start keymaster-4-1
 
 on property:hwservicemanager.ready=true
     start mobicore
-    start soter_hal
     start keymaster_attestation-1-1
     start gatekeeper-1-0
     start keymaster-4-1
 
 on property:ro.crypto.state=unsupported
     stop mobicore
-    stop soter_hal
     stop keymaster_attestation-1-1
     stop gatekeeper-1-0
     stop keymaster-4-1
 
 on property:ro.crypto.state=unencrypted
     stop mobicore
-    stop soter_hal
     stop keymaster_attestation-1-1
     stop gatekeeper-1-0
     stop keymaster-4-1
 
 on property:twrp.decrypt.done=true
     stop mobicore
-    stop start soter_hal
     stop keymaster_attestation-1-1
     stop gatekeeper-1-0
     stop keymaster-4-1
