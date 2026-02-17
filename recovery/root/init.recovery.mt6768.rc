@@ -3,7 +3,6 @@ import /init.recovery.common.rc
 import /init.tee.rc
 
 on init
-     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
      start prepdecrypt
 
 on fs
