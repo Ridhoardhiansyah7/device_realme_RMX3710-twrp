@@ -20,8 +20,4 @@ PRODUCT_MAKEFILES += \
     
 COMMON_LUNCH_CHOICES += \
     twrp_RMX3710-user \
-    twrp_RMX3710-userdebug \
-    twrp_RMX3710-eng \
-    pbrp_RMX3710-user \
-    pbrp_RMX3710-userdebug \
-    pbrp_RMX3710-eng
+    pbrp_RMX3710-user
