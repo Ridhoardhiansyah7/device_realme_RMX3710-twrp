@@ -47,10 +47,6 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-mtkimpl \
     android.hardware.boot@1.2-mtkimpl.recovery \
 
-PRODUCT_PACKAGES_DEBUG += \
-    bootctrl \
-    update_engine_client
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -62,11 +58,7 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1
-
-# Keystore Hal
+# Keystore2
 PRODUCT_PACKAGES += \
     android.system.keystore2
 
@@ -81,15 +73,10 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+# Debug
 PRODUCT_PACKAGES_DEBUG += \
+    bootctrl \
     update_engine_client
 
-# Additional configs
-TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.1
-
-TARGET_RECOVERY_DEVICE_MODULES += \
-    android.hardware.keymaster@4.1
-
 # Hidl
-PRODUCT_ENFORCE_VINTF_MANIFEST := true 
+#PRODUCT_ENFORCE_VINTF_MANIFEST := true 
