@@ -1,3 +1,19 @@
+# A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    boot \
+    dtbo \
+    system \
+    system_ext \
+    product \
+    vendor \
+    odm \
+    tee \
+    vbmeta \
+    vendor_boot \
+    vbmeta_system \
+    vbmeta_vendor
+
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
