@@ -20,20 +20,6 @@ DEVICE_PATH := device/realme/RMX3710
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_DUP_RULES := true
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    boot \
-    dtbo \
-    system \
-    system_ext \
-    product \
-    vendor \
-    vbmeta \
-    vendor_boot \
-    vbmeta_system \
-    vbmeta_vendor
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
