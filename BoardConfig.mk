@@ -109,7 +109,7 @@ TW_USE_FSCRYPT_POLICY := 2
 TW_FORCE_KEYMASTER_VER := true
 
 # Inherit Partition flags 
-include device/realme/RMX3235/Partitions.mk
+include device/realme/RMX3710/Partitions.mk
 
 # Inherit Recovery flags
-include device/realme/RMX3235/RecoveryFlags.mk
+include device/realme/RMX3710/RecoveryFlags.mk
