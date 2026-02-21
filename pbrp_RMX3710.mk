@@ -25,7 +25,7 @@ $(call inherit-product, vendor/pb/config/common.mk)
 $(call inherit-product, device/realme/RMX3710/device.mk)
 
 PRODUCT_DEVICE := RMX3710
-PRODUCT_NAME := twrp_RMX3710
+PRODUCT_NAME := pbrp_RMX3710
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3710
 PRODUCT_MANUFACTURER := realme
