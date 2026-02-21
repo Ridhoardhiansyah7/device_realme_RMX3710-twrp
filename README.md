@@ -7,7 +7,7 @@ Basic   | Spec Sheet
 CPU     | Octa-core (2x2.0 GHz Cortex-A75 & 6x1.8 GHz Cortex-A55)
 CHIPSET | Mediatek MT6768 / Helio G88 (12 nm)
 GPU     | Mali-G52 MC2
-Memory  | 4GB/6GB/8GB
+Memory  | 3GB/4GB/6GB/8GB
 Shipped Android Version | Android 13, Realme UI 4.0
 Storage | 64GB/128GB/256GB
 Battery | Li-Po 5000 mAh
