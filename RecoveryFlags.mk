@@ -42,8 +42,8 @@ PB_TORCH_PATH := "/sys/class/flashlight_core/flashlight"
 PB_TORCH_MAX_BRIGHTNESS := 1
 
 # Excludes (safe recovery partition size)
-#TW_EXCLUDE_NANO := true
-#TW_EXCLUDE_TZDATA := true
+TW_EXCLUDE_NANO := true
+TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_TWRPAPP := true
