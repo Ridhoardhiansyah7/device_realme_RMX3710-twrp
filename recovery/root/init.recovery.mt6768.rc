@@ -5,19 +5,17 @@ import /init.recovery.tee.rc
 on init
      start prepdecrypt
 
-on fs
-    install_keyring
-
 on early-fs
     start vold
 
-service mtk.plpath.utils.link /system/bin/mtk_plpath_utils
-    class main
-    user root
-    group root system
-    oneshot
-    disabled
-    seclabel u:r:recovery:s0
+on fs
+    install_keyring
+
+on post-fs
+    start boot-hal-1-2
+
+on boot
+    start health-hal-2-1
 
 service prepdecrypt /system/bin/prepdecrypt.sh
     user root
@@ -95,10 +93,3 @@ on property:twrp.decrypt.done=true
     stop keymaster_attestation-1-1
     stop gatekeeper-1-0
     stop keymaster-4-1
-
-on post-fs
-    start boot-hal-1-2
-
-on boot
-    start mtk.plpath.utils.link
-    start health-hal-2-1
