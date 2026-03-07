@@ -1,17 +1,11 @@
 # TWRP Configurations
+TW_THEME := portrait_hdpi
 TW_FRAMERATE := 90
 TW_DEFAULT_LANGUAGE := en
 TW_EXTRA_LANGUAGES := false
-TW_THEME := portrait_hdpi
-TARGET_USES_LOGD := true
-TWRP_INCLUDE_LOGCAT := true
-TW_INCLUDE_RESETPROP := true
-TW_INCLUDE_REPACKTOOLS := true
-TW_INCLUDE_LIBRESETPROP := true
-TW_INCLUDE_NTFS_3G := true
-TARGET_USES_MKE2FS := true
-TW_INCLUDE_FUSE_EXFAT := true
 TW_NO_FASTBOOT_BOOT := true
+TARGET_USES_MKE2FS := true
+TARGET_USES_LOGD := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 
 # Tw-StatusBar
@@ -20,26 +14,13 @@ TW_CUSTOM_CPU_POS := "300"
 TW_CUSTOM_CLOCK_POS := "70"
 TW_CUSTOM_BATTERY_POS := "790"
 
-# OrangeFox Configuration
-FOX_VIRTUAL_AB_DEVICE := true
-OF_DEFAULT_KEYMASTER_VERSION := 4.1
-FOX_BUILD_DEVICE := RMX3710
-OF_DEFAULT_LANG := id
-OF_FLASHLIGHT_ENABLE := true
-OF_FL_PATH1 := /sys/class/flashlight_core/flashlight
-OF_KEEP_DM_VERITY := true
-
-# Ofx-StatusBar
-OF_HIDE_NOTCH := true
-OF_CLOCK_POS := 1
-OF_STATUS_INDENT_LEFT := 50
-OF_STATUS_INDENT_RIGHT := 50
-
-# PBRP Configuration
-PBRP_DEVICE := RMX3710
-PB_DISABLE_DEFAULT_DM_VERITY := true
-PB_TORCH_PATH := "/sys/class/flashlight_core/flashlight"
-PB_TORCH_MAX_BRIGHTNESS := 1
+# Include
+TWRP_INCLUDE_LOGCAT := true
+TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_REPACKTOOLS := true
+TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_FUSE_EXFAT := true
+TW_INCLUDE_NTFS_3G := true
 
 # Excludes (safe recovery partition size)
 TW_EXCLUDE_NANO := true
@@ -53,7 +34,22 @@ TW_EXCLUDE_LPDUMP := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_EXCLUDE_ENCRYPTED_BACKUPS := false
+TW_EXCLUDE_ENCRYPTED_BACKUPS := true
+
+# OrangeFox Configuration
+FOX_VIRTUAL_AB_DEVICE := true
+OF_DEFAULT_KEYMASTER_VERSION := 4.1
+FOX_BUILD_DEVICE := RMX3710
+OF_DEFAULT_LANG := en
+OF_FLASHLIGHT_ENABLE := true
+OF_FL_PATH1 := /sys/class/flashlight_core/flashlight
+OF_KEEP_DM_VERITY := true
+
+# Ofx-StatusBar
+OF_HIDE_NOTCH := true
+OF_CLOCK_POS := 1
+OF_STATUS_INDENT_LEFT := 50
+OF_STATUS_INDENT_RIGHT := 50
 
 OF_SKIP_MAGISK_PATCH := true
 OF_DISABLE_MIUI_SPECIFIC_FEATURES := true
@@ -62,6 +58,12 @@ OF_NO_MIUI_PATCH_WARNING := true
 FOX_USE_LPTOOLS := false
 FOX_USE_ZSTD := false
 FOX_USE_LZMA_UTILS := false
+
+# PBRP Configuration
+PBRP_DEVICE := RMX3710
+PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_TORCH_PATH := "/sys/class/flashlight_core/flashlight"
+PB_TORCH_MAX_BRIGHTNESS := 1
 
 # Maintainer
 BOARD_MAINTAINER_NAME := RMX3710-Aflahal
