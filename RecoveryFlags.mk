@@ -22,7 +22,7 @@ TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_NTFS_3G := true
 
-# Excludes (safe recovery partition size)
+# Excludes
 TW_EXCLUDE_NANO := true
 TW_EXCLUDE_TZDATA := true
 TW_EXCLUDE_APEX := true
@@ -32,7 +32,6 @@ TW_EXCLUDE_BASH := true
 TW_EXCLUDE_LPTOOLS := true
 TW_EXCLUDE_LPDUMP := true
 TW_EXCLUDE_SUPERSU := true
-TW_EXCLUDE_PYTHON := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_ENCRYPTED_BACKUPS := true
 
@@ -41,9 +40,10 @@ FOX_VIRTUAL_AB_DEVICE := true
 OF_DEFAULT_KEYMASTER_VERSION := 4.1
 FOX_BUILD_DEVICE := RMX3710
 OF_DEFAULT_LANG := en
+OF_KEEP_DM_VERITY := true
+OF_USE_SYSTEM_FINGERPRINT := true
 OF_FLASHLIGHT_ENABLE := true
 OF_FL_PATH1 := /sys/class/flashlight_core/flashlight
-OF_KEEP_DM_VERITY := true
 
 # Ofx-StatusBar
 OF_HIDE_NOTCH := true
