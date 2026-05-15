@@ -1,6 +1,5 @@
 # TWRP Configurations
 TW_THEME := portrait_hdpi
-TW_FRAMERATE := 90
 TW_DEFAULT_LANGUAGE := en
 TW_EXTRA_LANGUAGES := false
 TW_NO_FASTBOOT_BOOT := true
@@ -37,13 +36,10 @@ TW_EXCLUDE_ENCRYPTED_BACKUPS := true
 
 # OrangeFox Configuration
 FOX_VIRTUAL_AB_DEVICE := true
-OF_DEFAULT_KEYMASTER_VERSION := 4.1
 FOX_BUILD_DEVICE := RMX3710
 OF_DEFAULT_LANG := en
 OF_KEEP_DM_VERITY := true
 OF_USE_SYSTEM_FINGERPRINT := true
-OF_FLASHLIGHT_ENABLE := true
-OF_FL_PATH1 := /sys/class/flashlight_core/flashlight
 
 # Ofx-StatusBar
 OF_HIDE_NOTCH := true
